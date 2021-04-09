@@ -1,0 +1,56 @@
+@import "mixins";
+#header{
+    width:100vw;
+    height: 20vh;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    
+   
+    .container{
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        align-items:center;
+
+        h1{
+            color:#515ada;
+            margin-top: 1rem;
+            font-weight: 500;
+            font-size: 3rem;
+            
+        }
+        nav{
+            margin-bottom: 1rem;
+            a{
+                margin: 0 1.5rem;
+                color:white;
+                text-decoration: none;
+                font-weight: 700;
+                text-transform:uppercase;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #header{
+        height: 15vh;
+        .container {
+            h1{
+                font-size: 1.5rem;
+            }
+            nav{
+                a{
+                    margin: 0 .3rem;
+                    color:white;
+                    text-decoration: none;
+                    font-weight: 700;
+                    text-transform:uppercase;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}
